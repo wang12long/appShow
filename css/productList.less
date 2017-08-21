@@ -1,0 +1,90 @@
+@charset "utf-8";
+/*导航栏*/
+.nav{
+  height: 38px;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+  border-top:1px solid #ebebeb;
+  border-bottom: 1px solid #cccccc;
+  font:15px/38px "微软雅黑";
+  padding-left:5px;
+  overflow: hidden;
+  a{
+    display: inline-block;
+    padding:0 6px;
+    height: 100%;
+  }
+}
+/*商品列表*/
+.productlist{
+  background-color: #fff;
+  .product{
+    border-bottom: 1px solid #ccc;
+    padding:10px 10px 10px 10px;
+    a{
+      display: block;
+      >img{
+        float: left;
+        margin-right: 10px;
+      }
+      >.info{
+          overflow: hidden;
+        >div{
+          overflow: hidden;
+          /*下面三个属性可以在文本超出时显示省略号,配合overflow: hidden;*/
+          -webkit-line-clamp: 2;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+        }
+        >.name {
+          height: 46px;
+          /*让浏览器在任意位置换行*/
+          word-break: break-all;
+          font: 15px/23px "微软雅黑";
+        }
+        >.price{
+          color: #ed0000;
+          font-size: 17px;
+          font-weight:600;
+          padding:5px 0;
+        }
+        >.msg{
+          height: 20px;
+          >span{
+            font-size: 13px;
+            &:nth-of-type(2){
+              padding-left: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/*翻页栏*/
+.pagebox{
+  height:34px;
+  overflow: hidden;
+  display: flex;
+  justify-content:space-around;
+  >.buttom {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 25%;
+    text-align: center;
+    line-height: 32px;
+    font-size:16px;
+  }
+  >select{
+    width: auto;
+    padding:0 5.5%;
+    box-sizing: border-box;
+    font:16px/32px "微软雅黑";
+    /*取消小三角*/
+    appearance:none;
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari 和 Chrome */
+    >option{
+      text-align: center;
+    }
+  }
+}

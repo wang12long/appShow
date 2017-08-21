@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--规定视口-->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>省钱控-慢慢买</title>
+    <!--引入icon图标-->
+    <link rel="icon" href="favicon.ico">
+    <!--引入bootstrap.css-->
+    <link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css">
+    <!--引入重置样式表-->
+    <link rel="stylesheet" href="css/base.css">
+    <!--引入页面样式表-->
+    <link rel="stylesheet" href="css/sqk2.css">
+</head>
+<body>
+<header>
+    <a href="javascript:history.back(-1)" class="back">&lt;</a>
+    <a href="#">国内折扣</a>
+    <a href="#" class="app"><img src="images/header_app.png"/></a>
+</header>
+<section class="clearfix">
+
+</section>
+<div id="foot">
+    <div class="foot-top">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a class="top3" href="javascript:;">
+            <img src="images/foot-arrow.jpg" alt=""/>返回顶部</a>
+    </div>
+    <div class="footer">
+        <p><a href="javascript:;" style="color:red">手机APP下载</a>
+            <a href="javascript:;">慢慢买手机版</a>--掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</div>
+<!--固定广告-->
+<div class="brand-ad">
+    <a class="ad-close" href="javascript:;"></a>
+    <div class="ad-logo"></div>
+    <p class="ad-title1">慢慢买</p>
+    <p class="ad-title2">全网比价，查历史价格</p>
+    <a  class="ad-open" href="http://m.manmanbuy.com/?o=download">立即打开</a>
+</div>
+</body>
+
+<!--引入jquery-->
+<script src="lib/jquery/jquery.min.js"></script>
+<!--引入bootstrap.js-->
+<script src="lib/bootstrap/bootstrap.min.js"></script>
+<!--引入template-->
+<script src="lib/template/template.js"></script>
+<!--引入页面js-->
+<script src="js/sqk2.js"></script>
+<script type="text/html" id="Shop">
+    {{each result as value i}}
+    <div>
+        <p class="name">{{#value.productName}}</p>
+        <p class="from">{{#value.productFrom}}{{#value.productTime}}{{#value.productTips}}</p>
+    </div>
+    <div>
+        <p class="img f_right ">{{#value.productImgSm}}</p>
+        <div class="info ">{{#value.productInfo}}</div>
+        <p class="info1 clearfix">{{#value.productInfo1}}{{#value.productInfo2}}</p>
+    </div>
+    <div>{{#value.productImgLg}}</div>
+    <div class="store">
+        {{#value.productCity}}
+    </div>
+    <div class="buy">
+        <p><a href="javascript:">前 往 购 买</a></p>
+        <img src="images/mmbweixin2.png"/>
+    </div>
+    <div class="Comment">
+        {{#value.productComment}}
+    </div>
+    {{/each}}
+
+</script>
+</html>

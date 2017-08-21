@@ -1,0 +1,64 @@
+@charset "utf-8";
+/*商品分类*/
+.category {
+  margin: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  > div {
+    display: block;
+    border-bottom: 1px solid #ccc;
+    > .tit {
+      height: 40px;
+      overflow: hidden;
+      > span {
+        font: 600 16px/40px "微软雅黑";
+        padding-left: 10px;
+      }
+      > i {
+        display: block;
+        width: 15px;
+        height: 7px;
+        margin: 16px 10px;
+        float: right;
+        transition: all .5s;
+        background: url(http://www.zuyushop.com/wap/images/arrow1.gif) no-repeat;
+      }
+    }
+    > .item{
+      background-color: #fff;
+      display: none;
+      overflow: hidden;
+      ul{
+        text-align: center;
+        margin: 0;
+        li{
+          float: left;
+          width: 33.333%;
+          border-bottom:1px solid #cccccc;
+          border-right:1px solid #cccccc;
+          a {
+            display: block;
+            overflow: hidden;
+            height: 40px;
+            font:14px/40px "微软雅黑";
+          }
+          &:nth-of-type(3n){
+            border-right:1px solid rgba(0,0,0,0);
+          }
+          &.noborderbottom{
+            border-bottom:1px solid rgba(0,0,0,0);
+          }
+        }
+      }
+    }
+    &:nth-last-of-type(1) {
+      border-bottom: none;
+    }
+    //*点击展开页面带有active类名*/
+    &.active {
+       i {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

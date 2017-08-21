@@ -1,0 +1,131 @@
+@charset "utf-8";
+/*导航栏*/
+.nav{
+  height: 38px;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+  border-top:1px solid #ebebeb;
+  border-bottom: 1px solid #cccccc;
+  font:15px/38px "微软雅黑";
+  padding-left:5px;
+  overflow: hidden;
+  a{
+    display: inline-block;
+    padding:0 6px;
+    height: 100%;
+  }
+}
+/*商品信息*/
+.info{
+  background-color: #fff;
+  >.name{
+    text-align: center;
+    font:18px/30px "微软雅黑";
+    padding:8px 0;
+    overflow: hidden;
+  }
+  >.img{
+    padding:10px 0;
+    text-align: center;
+  }
+  >.tab >ul{
+    border-top:1px solid #c14d00;
+    border-bottom:1px solid #c14d00;
+    height:37px;
+    overflow: hidden;
+    >li{
+      text-align: center;
+      width:33.3333%;
+      float: left;
+      font:15px/35px "微软雅黑";
+      border-right: 1px solid #c14d00;
+      background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffd050), to(#ffbb00));
+      &:nth-of-type(1){
+        background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffa632), to(#ff9000));
+    }
+      &:nth-last-of-type(1){
+        border-right: 1px solid rgba(0,0,0,0);
+      }
+      >a{
+        display: block;
+        color: #ffffff;
+      }
+    }
+  }
+  >.plist{
+    padding:5px 10px;
+    background-color: #F2F2F2;
+    //border-bottom:1px solid #cccccc;
+      >table{
+        position: relative;
+        >tbody{
+          >tr{
+            >td:nth-of-type(2){
+              text-align: left;
+              position: absolute;
+              top: 1px;
+              left: 18px;
+            }
+            >td:nth-of-type(3){
+              text-align: right;
+              color: red;
+            }
+          }
+        }
+      }
+  }
+}
+/*评价*/
+.comment{
+  >.title{
+    border-top: 4px solid #7a7a7a;
+    text-align: center;
+    line-height:30px;
+    background-color: #DBDBDB;
+  }
+  >.content{
+    background-color: #F2F2F2;
+    font-size:12px;
+    color: #666;
+    li{
+      padding:10px 10px;
+      border-bottom:1px solid #cccccc;
+      >div{
+        padding:3px 0;
+      }
+      >.comName{
+        display: flex;
+        justify-content:space-between;
+      }
+      >.comFrom{
+        display: flex;
+        justify-content:space-between;
+        >.star {
+          background: url('../images/stargary.svg');
+          width: 65px;
+          height: 13px;
+          >span{
+            display: block;
+            height: 100%;
+            background: url('../images/star.svg');
+            &.star3{
+              width:60%;
+            }
+            &.star4{
+              width:80%;
+            }
+            &.star5{
+              width:100%;
+            }
+          }
+        }
+      }
+      >.comContent {
+        font-size: 13px;
+        color: #000;
+      }
+      &:nth-last-of-type(1){
+        border-bottom:none;
+      }
+    }
+  }
+}

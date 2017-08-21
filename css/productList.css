@@ -1,0 +1,92 @@
+@charset "utf-8";
+/*导航栏*/
+.nav {
+  height: 38px;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #cccccc;
+  font: 15px/38px "微软雅黑";
+  padding-left: 5px;
+  overflow: hidden;
+}
+.nav a {
+  display: inline-block;
+  padding: 0 6px;
+  height: 100%;
+}
+/*商品列表*/
+.productlist {
+  background-color: #fff;
+}
+.productlist .product {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 10px 10px 10px;
+}
+.productlist .product a {
+  display: block;
+}
+.productlist .product a > img {
+  float: left;
+  margin-right: 10px;
+}
+.productlist .product a > .info {
+  overflow: hidden;
+}
+.productlist .product a > .info > div {
+  overflow: hidden;
+  /*下面三个属性可以在文本超出时显示省略号,配合overflow: hidden;*/
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+.productlist .product a > .info > .name {
+  height: 46px;
+  /*让浏览器在任意位置换行*/
+  word-break: break-all;
+  font: 15px/23px "微软雅黑";
+}
+.productlist .product a > .info > .price {
+  color: #ed0000;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 5px 0;
+}
+.productlist .product a > .info > .msg {
+  height: 20px;
+}
+.productlist .product a > .info > .msg > span {
+  font-size: 13px;
+}
+.productlist .product a > .info > .msg > span:nth-of-type(2) {
+  padding-left: 15px;
+}
+/*翻页栏*/
+.pagebox {
+  height: 34px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+}
+.pagebox > .buttom {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 25%;
+  text-align: center;
+  line-height: 32px;
+  font-size: 16px;
+}
+.pagebox > select {
+  width: auto;
+  padding: 0 5.5%;
+  box-sizing: border-box;
+  font: 16px/32px "微软雅黑";
+  /*取消小三角*/
+  appearance: none;
+  -moz-appearance: none;
+  /* Firefox */
+  -webkit-appearance: none;
+  /* Safari 和 Chrome */
+}
+.pagebox > select > option {
+  text-align: center;
+}

@@ -1,0 +1,85 @@
+.axHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 100%;
+  background-color: #ff841d;
+  z-index: 100;
+}
+.axHeader p {
+  text-align: center;
+  font-size: 24px;
+  color: #FFF;
+  font-family: "����";
+  line-height: 50px;
+}
+.axHeader p a {
+  text-decoration: none;
+  float: left;
+  font-size: 30px;
+  color: #fff;
+  display: block;
+  width: 50px;
+}
+.axHeader p span {
+  height: 50px;
+  width: 50px;
+  display: block;
+  float: right;
+  background: url("../images/header_app.png") no-repeat 0px 5px;
+  background-size: 40px 40px;
+}
+.axProduct {
+  padding-top: 55px;
+}
+.axProduct ul li {
+  margin: 10px 0;
+}
+.axProduct ul li a {
+  display: block;
+}
+.axProduct ul li a .img {
+  margin: 0 auto;
+  height: 140px;
+  width: 140px;
+}
+.axProduct ul li a .img img {
+  display: block;
+  width: 100%;
+}
+.axProduct ul li a .inform {
+  margin-top: 8px;
+}
+.axProduct ul li a .inform .proName {
+  height: 36px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+  overflow: hidden;
+}
+.axProduct ul li a .inform p {
+  height: 16px;
+  font-size: 13px;
+  margin-top: 4px;
+  color: red;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+.axProduct ul li a .inform div {
+  font-size: 12px;
+  color: #333;
+}
+.axProduct ul li a .inform div .supermarket {
+  border-right: 1px solid #ccc;
+}
+.catalogue {
+  height: 25px;
+  padding-left: 15px;
+  line-height: 25px;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  background-color: #f1f1f1;
+  font-family: "����";
+  overflow: hidden;
+}

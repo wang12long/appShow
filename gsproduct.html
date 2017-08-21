@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>凑单品-慢慢买</title>
+    <!-- 设置网站图标-->
+    <link rel="shortcut icon" href="images/mmm.ico"/>
+    <!--引用第三方的样式-->
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <!--引用样式重置文件-->
+    <link rel="stylesheet" href="./css/base.css">
+    <!--引用自己的样式文件-->
+    <link rel="stylesheet" href="./css/coudan.css">
+</head>
+
+<body>
+<!--头部区域-->
+<header id="header">
+    <div class="content">
+        <a href="index.html" class="back"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></a>
+
+        <h3>凑单品</h3>
+    </div>
+</header>
+<!--商品列表-->
+<div class="coudan">
+    <div class="list">
+        <div class="l-top">
+            <div class="filter">
+                <ul>
+                    <li><a href="javascript:;">京东<i></i></a>
+
+                    </li>
+                    <li><a href="javascript:;">华北<i></i></a>
+                    </li>
+                    <li><a href="javascript:;">全部价格<i></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="search"><i></i></div>
+            <div class="popsort popbox">
+                <ul>
+                    <!--<li class="on"><a href="javascript:;">京东</a></li>-->
+                    <!--<li><a href="javascript:;">一号店</a></li>-->
+                    <!--<li><a href="javascript:;">天猫超市</a></li>-->
+                </ul>
+            </div>
+            <div class="popprice popbox">
+                <ul>
+                    <!--<li class="on"><a href="javascript:;">华北（北京、山西等）</a></li>-->
+                    <!--<li><a href="javascript:;">华东（山东、浙江等）</a></li>-->
+                    <!--<li><a href="javascript:;">华南（广东、广西等）</a></li>-->
+                    <!--<li><a href="javascript:;">华中（湖北、河南等）</a></li>-->
+                    <!--<li><a href="javascript:;">西南（四川、云南等）</a></li>-->
+                    <!--<li><a href="javascript:;">东北（辽宁、吉林等）</a></li>-->
+                    <!--<li><a href="javascript:;">西北（宁夏、新疆等）</a></li>-->
+                </ul>
+            </div>
+            <div class="popcat popbox">
+                <ul>
+                    <li><a href="#">全部价格<i></i></a></li>
+                    <li><a href="#">1-3元<i></i></a></li>
+                    <li><a href="#">3-5元<i></i></a></li>
+                    <li><a href="#">5-10元<i></i></a></li>
+                    <li><a href="#">10-15元<i></i></a></li>
+                    <li><a href="#">15元以上<i></i></a></li>
+                </ul>
+            </div>
+            <div class="popsearch popbox">
+                <div class="formsch clearfix">
+                    <div class="txt">
+                        <input type="search" value=""  class="border-img" placeholder="搜索您想要的凑单品"/>
+                    </div>
+                    <div class="smt">
+                        <input type="button" value="搜索" id="bUt"/>
+                    </div>
+                </div>
+                <div class="select" id="s1">
+                    <div class="t">排序</div>
+                    <div class="c">
+                        <dl class="clearfix">
+                            <dd><a href="javascript:;">销量</a></dd>
+                            <dd><a href="javascript:;" class="on">价格&uarr;</a></dd>
+                            <dd><a href="javascript:;">价格&darr;</a></dd>
+
+
+                        </dl>
+                    </div>
+                </div>
+                <div class="select" id="s2">
+                    <div class="t">分类</div>
+                    <div class="c">
+                        <dl class="clearfix">
+
+                            <dd><a href="javascript:" class='on'>全部</a></dd>
+                            <dd><a href="javascript:;">家居</a></dd>
+                            <dd><a href="javascript:;">数码</a></dd>
+                            <dd><a href="javascript:;">办公</a></dd>
+                            <dd><a href="javascript:;">个护</a></dd>
+                            <dd><a href="javascript:;">食品</a></dd>
+                            <dd><a href="javascript:;">母婴</a></dd>
+                            <dd><a href="javascript:;">服饰</a></dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="l-bottom clearfix">
+            <ul id="container">
+
+
+            </ul>
+            <!--<p class="tips loading">正在加载...</p>-->
+        </div>
+    </div>
+</div>
+<!--底部-->
+<div id="foot">
+    <div class="foot-top">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a class="top3" href="javascript:;">
+            <img src="images/foot-arrow.jpg" alt=""/>返回顶部</a>
+    </div>
+    <div class="footer">
+        <p><a href="javascript:;" style="color:red">手机APP下载</a>
+            <a href="javascript:;">慢慢买手机版</a>--掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</div>
+<!--固定广告-->
+<div class="brand-ad">
+    <a class="ad-close" href="javascript:;"></a>
+    <div class="ad-logo"></div>
+    <p class="ad-title1">慢慢买</p>
+    <p class="ad-title2">全网比价，查历史价格</p>
+    <a  class="ad-open" href="http://m.manmanbuy.com/?o=download">立即打开</a>
+</div>
+</body>
+
+<script type="text/template" id="item1">
+    {{each result as value i}}
+    <li>
+        <a href="javascript:void(0);">
+            {{value.shopName}}
+            <i></i>
+        </a>
+    </li>
+    {{/each}}
+</script>
+<script type="text/template" id="item2">
+    {{each result as value i}}
+    <li>
+        <a href="javascript:;">
+            {{value.areaName}}
+            <i></i>
+        </a>
+    </li>
+    {{/each}}
+</script>
+<script type="text/template" id="item3">
+    {{each result as value i}}
+    <li><a href="javascript:;">
+        <div class="pic">
+            <img src="{{#value.productImg}}" style='height: 192px;'/>
+        </div>
+        <div class="title">{{value.productName}}</div>
+        <div class="other">
+            <div class="price">
+                <!--<em>&yen;</em>-->
+                <!--23.00-->
+                {{value.productPrice}}
+            </div>
+            <div class="btn">去凑单</div>
+        </div>
+
+    </a></li>
+    {{/each}}
+
+</script>
+
+
+<!--引用jq-->
+<script src="./lib/jquery/jquery.min.js"></script>
+<!--引用bootstrap.js-->
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+
+<!--引用template.js-->
+<script src="./lib/template/template.js"></script>
+<!--引用自己的js-->
+<script src="./js/coudan.js"></script>
+<script>
+
+</script>
+
+</html>

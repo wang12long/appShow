@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--规定web视口-->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>比价搜索-慢慢买</title>
+    <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
+    <!--引入公用样式表-->
+    <link rel="stylesheet" href="css/base.css">
+    <!--引入页面样式表-->
+    <link rel="stylesheet" href="css/productList.css">
+</head>
+<body>
+<!--头部通栏和搜索框-->
+<header>
+    <div id="header">
+        <a href="index.html" class="logo">
+            <img src="images/header_logo.png" alt="">
+        </a>
+        <a href="javascript:;" class="app">
+            <img src="images/header_app.png" alt="">
+        </a>
+    </div>
+    <div id="search">
+        <form action="search">
+            <input type="search" placeholder="请输入你想比价的商品">
+            <input type="submit" disabled='true'>
+        </form>
+    </div>
+</header>
+<!--导航栏-->
+<div class="nav">
+
+</div>
+<!--中间商品列表盒子-->
+<div class="productlist">
+
+</div>
+<!--翻页按钮盒子-->
+<div class="pagebox">
+    <div class="buttom">上一页</div>
+    <select name="page">
+        <option value="1">第1页</option>
+    </select>
+    <div class="buttom">下一页</div>
+</div>
+
+<!--底部-->
+<div id="foot">
+    <div class="foot-top">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a class="top3" href="javascript:;">
+            <img src="images/foot-arrow.jpg" alt=""/>返回顶部</a>
+    </div>
+    <div class="footer">
+        <p><a href="javascript:;" style="color:red">手机APP下载</a>
+            <a href="javascript:;">慢慢买手机版</a>--掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</div>
+<!--固定广告-->
+<div class="brand-ad">
+    <a class="ad-close" href="javascript:;"></a>
+    <div class="ad-logo"></div>
+    <p class="ad-title1">慢慢买</p>
+    <p class="ad-title2">全网比价，查历史价格</p>
+    <a  class="ad-open" href="http://m.manmanbuy.com/?o=download">立即打开</a>
+</div>
+</body>
+<!--导航栏模版-->
+<script type="text/html" id="nav">
+    <p>
+        <a href="index.html">首页</a>&gt;<a href="category.html">全部分类</a>&gt;<a href="productList.html?categoryId={{result[0].categoryId}}">{{result[0].category}}</a>
+    </p>
+</script>
+<!--商品列表模版-->
+<script type="text/html" id="productlist">
+<ul>
+    {{each result as value i}}
+    <li class="product">
+        <a href="bijiaproduct.html?productid={{value.productId}}&categoryid={{value.categoryId}}">
+            {{#value.productImg}}
+            <div class="info">
+                <div class="name">{{value.productName}}</div>
+                <div class="price">{{value.productPrice}}</div>
+                <div class="msg"><span>{{value.productQuote}}</span><span>{{value.productCom}}</span></div>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</ul>
+</script>
+<!--引入jquery-->
+<script src="lib/jquery/jquery.min.js"></script>
+<!--引入jquery.scrollTo插件-->
+<script src="lib/jquery/jquery.scrollTo.min.js"></script>
+<!--引入template-->
+<script src="lib/template/template.js"></script>
+<!--引入页面js-->
+<script src="js/productList.js"></script>
+
+</html>

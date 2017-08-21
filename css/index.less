@@ -1,0 +1,148 @@
+/*首页菜单开始*/
+@yelCor: #ff841d;
+.menu {
+  width: 100%;
+  background-color: #fff;
+  .row {
+    .item {
+      width: 25%;
+      height: 68px;
+      margin: 16px 0;
+      a {
+        display: block;
+        > img {
+          display: block;
+          width: 50px;
+          height: 50px;
+          margin: 0 auto;
+        }
+        > p {
+          display: block;
+          margin-top: 3px;
+          text-align: center;
+        }
+      }
+      &:nth-last-of-type(-n+4){
+        display: none;
+      }
+    }
+  }
+}
+
+/*.menu>.row>div:nth-last-child(-n+4){
+  background-color: #fff;
+}*/
+/*首页菜单结束*/
+/*折扣部分开始*/
+.rebate {
+  .rebate-title, .brand {
+    margin: 0 0 10px 0;
+    background-color: @yelCor;
+    height: 35px;
+    > h4 {
+      line-height: 35px;
+      padding-left: 20px;
+      font-size: 16px;
+      font-weight: 500;
+      font-family: inherit;
+      //font: 500 16px/35px inherit;
+      color: #fff;
+    }
+    > img {
+      float: right;
+      width: 20px;
+      height: 20px;
+      margin-top: -35px;
+      margin-right: 20px;
+    }
+  }
+  .rebate-item {
+    width: 100%;
+    background: #fff;
+    > .product {
+      display: flex;
+      height: 120px;
+      padding: 10px 8px;
+      border-bottom: 1px solid #e0e0e0;
+      > a {
+        //float: left;
+        flex: 1;
+        > img {
+          display: block;
+          width: 100px;
+          height: 100px;
+        }
+      }
+      > .product-content {
+        //float: right;
+        flex: 2;
+        > a {
+          > p {
+            color: @yelCor;
+          }
+          > span:nth-of-type(2) {
+            float: right;
+            position: relative;
+            color: #666;
+            > i {
+              position: absolute;
+              top: 4px;
+              right: 18px;
+              width: 14px;
+              height: 15px;
+              background: url("../images/msg.jpg") no-repeat;
+              -webkit-background-size: 100%;
+              background-size: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*折扣部分结束*/
+/*更多优惠信息*/
+.more_bar {
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  > a {
+    display: block;
+    width: 100%;
+    height: 30px;
+    //background-color: @yelCor;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid #ccc;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+}
+
+/*品牌排行*/
+
+.brand {
+  margin: 10px 0;
+  background-color: @yelCor;
+  height: 35px;
+  > h4 {
+    line-height: 35px;
+    padding-left: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: inherit;
+    //font: 500 16px/35px inherit;
+    color: #fff;
+  }
+  > img {
+    float: right;
+    width: 20px;
+    height: 20px;
+    margin-top: -35px;
+    margin-right: 20px;
+  }
+}
+
+

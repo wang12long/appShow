@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <title>慢慢买</title>
+    <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
+    <!--引入第三方文件-->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css"/>
+    <!-- 引用样式重置文件-->
+    <link rel="stylesheet" href="css/base.css"/>
+    <!-- 引用自己的样式文件-->
+    <link rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+<!--头部区域 -->
+<header>
+    <div id="header">
+        <a href="javascript:;" class="logo">
+            <img src="images/header_logo.png" alt="">
+        </a>
+        <a href="javascript:;" class="app">
+            <img src="images/header_app.png" alt="">
+        </a>
+    </div>
+    <div id="search">
+        <form action="search">
+            <input type="search" placeholder="请输入你想比价的商品">
+            <input type="submit" disabled='true'>
+        </form>
+    </div>
+</header>
+
+<!--首页菜单开始-->
+<section class="menu">
+    <div class="row">
+
+    </div>
+</section>
+<!--菜单模板-->
+<script type="text/complate" id="menuTpl">
+     {{each result as value i}}
+        <div class="item col-xs-3">
+            <a href="{{value.titlehref}}">
+                {{#value.img}}
+                 <p>{{value.name}}</p>
+            </a>
+        </div>
+     {{/each}}
+</script>
+<!--首页菜单结束-->
+<!--折扣开始-->
+<section class="rebate">
+    <div class="rebate-title">
+        <h4>超值折扣推荐</h4>
+        <img src="images/header_app.png" alt=""/>
+    </div>
+    <div class="rebate-item">
+    </div>
+</section>
+<!--折扣结束-->
+<!--折扣模板-->
+<script type="text/html" id="rebateTpl">
+{{each result as value i}}
+     <div class="product">
+            <a href="{{value.productId}}">
+            {{#value.productImgSm}}
+            </a>
+
+        <div class="product-content clearfix">
+            <a href="{{#value.productId}}">
+                 <h5>{{#value.productName}}</h5>
+                 <p>{{#value.productPinkage}}</p>
+                 <span>{{#value.productFrom}}|{{#value.productTime}}</span>
+                 <span><i></i>{{#value.productComCount}}</span>
+            </a>
+        </div>
+     </div>
+{{/each}}
+
+</script>
+<!--更多优惠信息-->
+<div class="more_bar">
+    <a href="JavaScript:">
+        更多优惠信息&gt;&gt;
+    </a>
+</div>
+<!--品牌排行
+<div class="brand">
+    <h4>品牌排行</h4>
+    <img src="images/header_app.png" alt=""/>
+</div>-->
+<!--底部登录信息-->
+<div id="foot">
+    <div class="foot-top">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a class="top3" href="javascript:;">
+            <img src="images/foot-arrow.jpg" alt=""/>返回顶部</a>
+    </div>
+    <div class="footer">
+        <p><a href="javascript:;" style="color:red">手机APP下载</a>
+            <a href="javascript:;">慢慢买手机版</a>--掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</div>
+<!--固定广告-->
+<div class="brand-ad">
+    <a class="ad-close" href="javascript:;"></a>
+    <div class="ad-logo"></div>
+    <p class="ad-title1">慢慢买</p>
+    <p class="ad-title2">全网比价，查历史价格</p>
+    <a  class="ad-open" href="http://m.manmanbuy.com/?o=download">立即打开</a>
+</div>
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/bootstrap/template/template.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

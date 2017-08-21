@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>白菜价-慢慢买</title>
+    <!--引入icon图标-->
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="./lib/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/baicaijia.css">
+</head>
+<body>
+<div class="fixed">
+    <!--头部部分 start-->
+    <header>
+        <a href="index.html" >
+            <p>&lt;</p>
+        </a>
+        <h3>白菜价-淘宝内部券</h3>
+        <a href="javascript:;">
+            <img src="./images/header_app.png" alt="">
+        </a>
+    </header>
+    <!--头部部分 end-->
+    <!--导航部分 strat-->
+    <div class='section'>
+        <div class="search">
+        </div>
+        <div class='icon_search'>
+            <img src="./images/1.png" alt="">
+            <span>×</span>
+        </div>
+    </div>
+
+    <div class="showcase">
+        <div class="txt">
+            <div class="small_icon"></div>
+            <input type="search" placeholder="搜索商品即可查内部券">
+        </div>
+        <div class="sbm"><a href="#">搜索</a></div>
+    </div>
+</div>
+
+<!--导航部分 end-->
+<!--商品部分 start-->
+<section class="content">
+
+</section>
+<div class="wait">正在加载...</div>
+<!--商品部分 end-->
+<!--底部 start-->
+<div id="foot">
+    <div class="foot-top">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a class="top3" href="javascript:;">
+            <img src="images/foot-arrow.jpg" alt=""/>返回顶部</a>
+    </div>
+    <div class="footer">
+        <p><a href="javascript:;" style="color:red">手机APP下载</a>
+            <a href="javascript:;">慢慢买手机版</a>--掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+    </div>
+
+</div>
+<div class="turntop">
+    <span>♂</span>
+</div>
+
+<!--底部 end-->
+<!--固定广告-->
+<div class="brand-ad">
+    <a class="ad-close" href="javascript:;"></a>
+    <div class="ad-logo"></div>
+    <p class="ad-title1">慢慢买</p>
+    <p class="ad-title2">全网比价，查历史价格</p>
+    <a  class="ad-open" href="http://m.manmanbuy.com/?o=download">立即打开</a>
+</div>
+</body>
+<script type="text/template" id="tpl">
+    {{each result as value i}}
+    <div class="contentDiv">
+        <div class="productImg">
+            <a href="">{{#value.productImg}}</a>
+        </div>
+
+        <div class="productMsg">
+            <div class="productName">
+                {{#value.productName}}
+            </div>
+            <div class="productPrice">
+                {{#value.productPrice}}
+            </div>
+            <div class="productCupon">
+                {{#value.productCoupon}}
+            </div>
+            <div class="remainNum">
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                         aria-valuemax="100" style="width:{{m = random(1,100)}}%;">
+                    </div>
+                    <span>{{m}}%</span>
+                </div>
+                <span>已领{{random(100,5000)}}张</span>
+            </div>
+        </div>
+        <div id="downloadHref">
+            {{#value.productHref}}
+        </div>
+    </div>
+    {{/each}}
+
+</script>
+
+
+<script type='text/html' id="msg">
+    <ul>
+        {{each result as value i}}
+        <li {{if (i==0)}}class="active"{{/if}}>
+            <a href="#">{{value.title}}</a>
+        </li>
+        {{/each}}
+    </ul>
+
+</script>
+
+
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/bootstrap/bootstrap.min.js"></script>
+<script src="./lib/template/template.js"></script>
+<script src="./lib/swipe.js"></script>
+<script src="./js/js.js"></script>
+</html>

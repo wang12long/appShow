@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+
+    <title>品牌大全-慢慢买</title>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <!--引用第三方的样式-->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css"/>
+    <!--引用样式重置文件-->
+    <link rel="stylesheet" href="css/base.css"/>
+    <!--引用自己的样式文件-->
+    <link rel="stylesheet" href="css/brandTitle.css"/>
+</head>
+<body>
+<!--头部区域-->
+<header id="header">
+    <a href="index.html" class="logo">
+        <img src="./images/header_logo.png" alt="">
+    </a>
+    <a href="http://m.manmanbuy.com/?o=download" class="app">
+        <img src="./images/header_app.png" alt="">
+    </a>
+</header>
+<!--搜索部分-->
+<section id="search">
+    <form action="">
+        <input type="search" placeholder="请输入你想比价的商品"/>
+        <input type="submit" value="搜索"/>
+    </form>
+</section>
+
+<!--中间列表-->
+<form class="brandTitle-category" action="">
+    <!--头部-->
+    <div class="brandTitle-nav">
+        <a href="index.html">首页</a>
+        >
+        <a href="brandTitle.html">品牌大全</a>
+    </div>
+    <!--标题-->
+    <div class="brandTitle-title">
+        热门品牌排行
+    </div>
+
+    <!--正在加载gif-->
+    <div class="load" style="text-align: center;"></div>
+
+    <!--列表-->
+    <div class="brandTitle-list">
+        <ul>
+            <!--<li><a href="#">平板电视十大品牌</a></li>-->
+            <!--<li><a href="#">平板电视十大品牌</a></li>-->
+        </ul>
+    </div>
+</form>
+<!--底部-->
+<div id="foot">
+    <div class="foot-top">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a class="top3" href="javascript:;">
+            <img src="images/foot-arrow.jpg" alt=""/>返回顶部</a>
+    </div>
+    <div class="footer">
+        <p><a href="javascript:;" style="color:red">手机APP下载</a>
+        <a href="javascript:;">慢慢买手机版</a>--掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</div>
+
+<!--固定广告-->
+<div class="brand-ad">
+    <a class="ad-close" href="javascript:;"></a>
+    <div class="ad-logo"></div>
+    <p class="ad-title1">慢慢买</p>
+    <p class="ad-title2">全网比价，查历史价格</p>
+    <a  class="ad-open" href="http://m.manmanbuy.com/?o=download">立即打开</a>
+</div>
+</body>
+<!--brand-list模板-->
+<script type="text/html" id="brandTitleTpl">
+    {{each result as value i}}
+       <li>
+           <a href="brand.html?brandtitleid={{value.brandTitleId}}">
+               {{value.brandTitle}}
+           </a>
+       </li>
+    {{/each}}
+</script>
+<!--引用jQ-->
+<script src="lib/jquery/jquery.min.js"></script>
+<!--引用bootstrap.js-->
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<!--引用template.js-->
+<script src="lib/template/template.js"></script>
+<!--引用jquery.scrollTo.js-->
+<script src="lib/jquery/jquery.scrollTo.min.js"></script>
+<!--引用自己的js-->
+<script src="js/brandTitle.js"></script>
+</html>

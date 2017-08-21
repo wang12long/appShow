@@ -1,0 +1,49 @@
+@charset "utf-8";
+/*中间品牌列表*/
+.brandTitle-category {
+  /*头部*/
+  /*标题*/
+  /*列表*/
+}
+.brandTitle-category > .brandTitle-nav {
+  height: 36px;
+  line-height: 36px;
+  background: -webkit-linear-gradient(top, #fff, #ebebeb);
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+  padding-left: 8px;
+}
+.brandTitle-category > .brandTitle-title {
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  color: #874604;
+  margin: 10px 5px;
+  padding-left: 10px;
+  border: 1px solid #ccc;
+  background-color: #eee;
+}
+.brandTitle-category > .brandTitle-list {
+  background-color: #ededed;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #666;
+  padding: 0 10px;
+}
+.brandTitle-category > .brandTitle-list > ul {
+  margin-bottom: 0;
+}
+.brandTitle-category > .brandTitle-list > ul > li > a {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #ccc;
+  background: url(../images/arrayright.svg) right center no-repeat;
+  background-size: 40px 20px;
+  font-size: 16px;
+  color: #000;
+  font-weight: 900;
+}
+

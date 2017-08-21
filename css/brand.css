@@ -1,0 +1,239 @@
+@charset "UTF-8";
+/*中间部分*/
+.brand-category {
+  /*头部*/
+  /*十大品牌开始*/
+  /*星星*/
+  /*1.哪个品牌好*/
+  /*2.销量排行*/
+  /*3.评论*/
+}
+.brand-category > .brand-nav {
+  height: 36px;
+  line-height: 36px;
+  background: -webkit-linear-gradient(top, #fff, #ebebeb);
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+  padding-left: 8px;
+}
+.brand-category .star {
+  background-image: url(../images/starGray.svg);
+  display: inline-block;
+  width: 90px;
+  height: 18px;
+}
+.brand-category .star > .star4,
+.brand-category .star .star5 {
+  background-image: url(../images/starRed.svg);
+  display: inline-block;
+  width: 20px;
+  height: 18px;
+}
+.brand-category .star > .star5 {
+  width: 90px;
+}
+.brand-category .star > .star4 {
+  width: 70px;
+}
+.brand-category > .goodbrand {
+  /*标题*/
+}
+.brand-category > .goodbrand > .b-list-title {
+  background-color: #f3f3f3;
+  border-bottom: 1px solid #c8c8c8;
+  color: #874604;
+}
+.brand-category > .goodbrand > .b-list-title > h3 {
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 36px;
+  margin: 0;
+  padding-left: 10px;
+}
+.brand-category > .goodbrand > .goodbrand-list > ul {
+  margin: 0;
+}
+.brand-category > .goodbrand > .goodbrand-list > ul > li {
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+}
+.brand-category > .goodbrand > .goodbrand-list > ul > li > a {
+  display: block;
+}
+.brand-category > .goodbrand > .goodbrand-list > ul > li > a > em {
+  float: left;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  color: #fff;
+  text-align: center;
+  margin-right: 10px;
+  background-color: #c9c9c9;
+}
+.brand-category > .goodbrand > .goodbrand-list > ul > li > a > .inner {
+  display: inline-block;
+}
+.brand-category > .goodbrand > .goodbrand-list > ul > li > a > .inner > p:first-child {
+  color: #000;
+  margin: 0;
+  font-size: 16px;
+  line-height: 19px;
+}
+.brand-category > .goodbrand > .goodbrand-list > ul > li > a > .inner > p:last-child {
+  font-size: 12px;
+  color: #999;
+  margin: 3px 0 0 0;
+}
+.brand-category > .goodbrand > .goodbrand-list > ul > li > a > span {
+  float: right;
+  width: 20px;
+  height: 20px;
+  margin-top: 10px;
+}
+.brand-category > .goodbrand > .goodbrand-list > ul > li:nth-child(1) em {
+  background-color: #f10e0e;
+}
+.brand-category > .goodbrand > .goodbrand-list > ul > li:nth-child(2) em {
+  background-color: #ff9314;
+}
+.brand-category > .goodbrand > .goodbrand-list > ul > li:nth-child(3) em {
+  background-color: #8adf5b;
+}
+.brand-category > .brandsales {
+  /*标题*/
+}
+.brand-category > .brandsales > .b-list-title {
+  background-color: #f3f3f3;
+  border-bottom: 1px solid #c8c8c8;
+}
+.brand-category > .brandsales > .b-list-title > a {
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 36px;
+  margin: 0;
+  padding-left: 10px;
+  color: #874604;
+}
+.brand-category > .brandsales > .brandsales-list > ul {
+  margin: 0;
+}
+.brand-category > .brandsales > .brandsales-list > ul > li {
+  padding: 10px;
+  border: 1px solid #e7e7e7;
+}
+.brand-category > .brandsales > .brandsales-list > ul > li > a {
+  display: block;
+}
+.brand-category > .brandsales > .brandsales-list > ul > li > a > .b-l-img {
+  float: left;
+  margin-right: 10px;
+  display: block;
+}
+.brand-category > .brandsales > .brandsales-list > ul > li > a > .b-l-info {
+  font-size: 14px;
+  line-height: 24px;
+}
+.brand-category > .brandsales > .brandsales-list > ul > li > a > .b-l-info > p:nth-child(1) {
+  line-height: 22px;
+  min-height: 50px;
+  color: #333;
+  margin: 0;
+}
+.brand-category > .brandsales > .brandsales-list > ul > li > a > .b-l-info > p:nth-child(2) {
+  height: 25px;
+  margin: 4px 0 0 0;
+}
+.brand-category > .brandsales > .brandsales-list > ul > li > a > .b-l-info > p:nth-child(2) > span:first-child {
+  color: #ea3900;
+  font-size: 18px;
+  float: left;
+}
+.brand-category > .brandsales > .brandsales-list > ul > li > a > .b-l-info > p:nth-child(2) > span:last-child {
+  float: right;
+}
+.brand-category > .brandsales > .brandsales-list > ul > li > a > .b-l-info > p:nth-child(3) {
+  font-size: 12px;
+  color: #999;
+  margin: 0;
+}
+.brand-category > .brandsales > .brandsales-list > ul > li > a > .b-l-info > p:nth-child(3) > span {
+  margin-right: 10px;
+}
+.brand-category > .review > .b-list-title {
+  background-color: #f3f3f3;
+  border-bottom: 1px solid #c8c8c8;
+  border-top: 1px solid #c8c8c8;
+}
+.brand-category > .review > .b-list-title > a {
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 36px;
+  margin: 0;
+  padding-left: 10px;
+  color: #874604;
+}
+.brand-category > .review > .review-list > ul {
+  margin: 0;
+}
+.brand-category > .review > .review-list > ul > li {
+  border-bottom: 1px solid #e7e7e7;
+  padding: 10px;
+}
+.brand-category > .review > .review-list > ul > li > a {
+  display: block;
+}
+.brand-category > .review > .review-list > ul > li > a > .review-top {
+  margin-bottom: 10px;
+}
+.brand-category > .review > .review-list > ul > li > a > .review-top > .r-t-img {
+  float: left;
+  margin-right: 10px;
+}
+.brand-category > .review > .review-list > ul > li > a > .review-top > .r-t-img img {
+  width: 80px;
+  height: 80px;
+}
+.brand-category > .review > .review-list > ul > li > a > .review-top > .r-t-title {
+  color: #999;
+  line-height: 22px;
+  font-size: 14px;
+}
+.brand-category > .review > .review-list > ul > li > .review-content {
+  background-color: #f8f8f8;
+  padding: 10px;
+  border: 1px solid #e7e7e7;
+  position: relative;
+}
+.brand-category > .review > .review-list > ul > li > .review-content::before {
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: -8px;
+  left: 29px;
+  border-bottom: 8px solid #e7e7e7;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+}
+.brand-category > .review > .review-list > ul > li > .review-content::after {
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: -7px;
+  left: 30px;
+  border-bottom: 8px solid #f8f8f8;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+}
+.brand-category > .review > .review-list > ul > li > .review-content > a > .r-c-title {
+  color: #4f6900;
+  font-size: 14px;
+}
+.brand-category > .review > .review-list > ul > li > .review-content > a > .r-c-title > i {
+  float: right;
+}
+.brand-category > .review > .review-list > ul > li > .review-content > .r-c-content {
+  margin-top: 10px;
+}

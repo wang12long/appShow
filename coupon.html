@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width"/>
+    <title>优惠劵-慢慢买</title>
+    <!--引入icon图标-->
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/coupon.css"/>
+</head>
+<body>
+<!--头部开始-->
+<header class="header">
+    <a href="javascript:history.back(-1)">&lt;</a>
+    <span>优惠券</span>
+    <img src="images/header_app.png" alt=""/>
+</header>
+<!--头部结束-->
+<!--优惠券盒子-->
+<div class="coupon clearfix">
+    <div class="row">
+
+    </div>
+</div>
+<!--首页/优惠券-->
+<div class="jump">
+    <a href="index.html" class="first">首页</a>&gt;
+    <a href="coupon.html" class="juan">优惠券</a>
+</div>
+<!--底部登录信息-->
+<div id="foot">
+    <div class="foot-top">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a class="top3" href="javascript:;">
+            <img src="images/foot-arrow.jpg" alt=""/>返回顶部</a>
+    </div>
+    <div class="footer">
+        <p><a href="javascript:;" style="color:red">手机APP下载</a>
+            <a href="javascript:;">慢慢买手机版</a>--掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</div>
+<!--固定广告-->
+<div class="brand-ad">
+    <a class="ad-close" href="javascript:;"></a>
+    <div class="ad-logo"></div>
+    <p class="ad-title1">慢慢买</p>
+    <p class="ad-title2">全网比价，查历史价格</p>
+    <a  class="ad-open" href="http://m.manmanbuy.com/?o=download">立即打开</a>
+</div>
+</body>
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/bootstrap/template/template.js"></script>
+<script src="js/yhj.js"></script>
+
+<!--优惠券模板-->
+<script type="text/html" id="couTpl">
+    {{each result as value i}}
+    <div class="coupon_box col-xs-4">
+        <a href="kfc.html?couponid={{value.couponId}}">
+            <img src="{{#value.couponImg}}" alt=""/>
+            <p>{{#value.couponTitle}}</p>
+        </a>
+
+    </div>
+    {{/each}}
+</script>
+</html>
